@@ -86,22 +86,19 @@ for (let i = 0; i < caixas.length; i++) {
 console.log(' ');
 
 
-const tentativas = ["1234", "admin", "secreto"];
+const tentativas = ["1234", "admin", "ssecreto"];
 const senhaCorreta = "secreto";
-
-    for(let i = 1; i <= tentativas.length; i++){
-        if(tentativas === senhaCorreta){
-            console.log('Acesso Permitido');
-           
+let contador = 0;
+    for(let i = 0; i < tentativas.length; i++){
+        if(tentativas[i] !== senhaCorreta){
+            console.log(`Tentativa ${i+1} inválida`);
+            contador++;
+        } else{
+            console.log('Acesso permitido!');
             
-        } else {
-           
-            console.log(`Tentativa ${i} Invalida`);
-            console.log(`${tentativas}`);
-            console.log(' ');
         }
-        
-    
-        
+        if (contador === 3){
+            console.log('Acesso bloqueado. Número máximo de tentativas atingido.');
+        }
     }
         
