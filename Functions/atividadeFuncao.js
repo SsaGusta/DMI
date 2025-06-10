@@ -79,3 +79,104 @@ verparimpar(5);
 
 // const verificarParidade = (numero) => numero % 2 === 0 ? "Par" : "Ímpar";
 
+//o sistema precisa calcular o valor do frete com base na distância até o endereço do cliente. A regra é a seguinte:
+
+// Até 5 km: frete fixo de R$ 5
+// De 5.1 km até 20 km: R$ 0,50 por quilômetro
+// Acima de 20 km: frete fixo de R$ 20
+let valorfrete = 0.00;
+function calculafrete(distancia) {
+    if(distancia <= 5){
+        valorfrete = 5;
+        return console.log(`Frete fixo de R$ 5.00`);
+    } else if (distancia > 5 && distancia <=20){
+        valorfrete = distancia * 0.50;
+        return console.log(`O valor do frete é R$ ${valorfrete}`);  
+    }else {
+        console.log(`Frete fixo de R$ 20.00`);
+        return valorfrete = 20;
+    }
+}
+calculafrete(3)
+calculafrete(12);
+calculafrete(25);
+
+// Resposta Alura:
+// function calcularFrete(distancia) {
+//     if (distancia <= 5) {
+//         return 5;
+//     } else if (distancia <= 20) {
+//         return distancia * 0.5;
+//     } else {
+//         return 20;
+//     }
+// }
+ 
+// console.log(calcularFrete(3));
+// console.log(calcularFrete(12));
+// console.log(calcularFrete(25));
+
+//Sua tarefa é criar uma função chamada processarPedido, que receba dois parâmetros:
+//o nome do cliente, e
+//uma função de callback responsável por exibir uma mensagem após o pedido ser processado.
+console.log('\n');
+
+
+function processarpedido(nome, tipo){
+    if (tipo === 'vip'){
+        console.log(`Processando pedido de ${nome}...\nObrigado pela preferência, ${nome}! Você ganhou frete grátis.\n`);
+        
+    }else if (tipo === 'novo'){
+        console.log(`Processando pedido de ${nome}...\nBem-vindo(a), ${nome}! Aproveite um cupom de boas-vindas.\n`);
+        
+    }else {
+        console.log(`Processando pedido de ${nome}...\nObrigado pela sua compra, João!\n`);
+        
+    }
+} 
+
+processarpedido('Gusta', 'vip');
+processarpedido('Ana', 'novo');
+processarpedido('João', 'comum');
+
+// Resposta Alura:
+// function processarPedido(nome, tipoCliente, callback) {
+//     console.log(`Processando pedido de ${nome}...`);
+//     callback(nome, tipoCliente);
+// }
+ 
+// function mensagemPersonalizada(nome, tipo) {
+//     if (tipo === "vip") {
+//         console.log(`Obrigado pela preferência, ${nome}! Você ganhou frete grátis.`);
+//     } else if (tipo === "novo") {
+//         console.log(`Bem-vindo(a), ${nome}! Aproveite um cupom de boas-vindas.`);
+//     } else {
+//         console.log(`Obrigado pela sua compra, ${nome}!`);
+//     }
+// }
+ 
+// processarPedido("Lucas", "vip", mensagemPersonalizada);
+
+console.log('\n');
+
+//Sua tarefa é criar uma função chamada responderUsuario, que receba dois parâmetros:
+//o nome do usuário, e uma função de callback que será executada após 3 segundos.
+
+let nomeU = 'Gusta';
+console.log('Processando sua pergunta...');
+setTimeout((responderUsuario) => console.log(`Olá, ${nomeU} Aqui está a resposta para sua dúvida.`), 3000, nomeU );
+
+// Resposta Alura:
+// function responderUsuario(nome, callback) {
+//     console.log("Processando sua pergunta...");
+//     setTimeout(() => {
+//         callback(nome);
+//     }, 3000);
+// }
+ 
+// function mostrarResposta(nome) {
+//     console.log(`Olá, ${nome}! Aqui está a resposta para sua dúvida.`);
+// }
+ 
+// responderUsuario("Camila", mostrarResposta);
+
