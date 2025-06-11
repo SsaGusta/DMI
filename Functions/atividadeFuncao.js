@@ -241,7 +241,6 @@ console.log( '\n');
 const arr = ['Gusta', 'Vic', 'Moisa'];
 const arr2 = [92, 67, 44];
 let sorteado = 0;
-
 console.log('Sorteando...');
 
 
@@ -252,21 +251,22 @@ const sorteio = (min, max) => {
 
 }
 
-const pontuacao = (result) => {
-    if (arr2[result] > 80){
+const pontuacao = (sorteado) => {
+    if (arr2[sorteado] > 80){
         console.log('Parabéns, você foi premiado!');
-    } else if (arr2[result] <= 80 && arr2[result] >= 50){
+    } else if (arr2[sorteado] <= 80 && arr2[sorteado] >= 50){
         console.log('Você quase conseguiu! Fique de olho nos próximos sorteios.');
     } else {
         console.log('Infelizmente, não foi dessa vez.');
-        console.log(result);
     } 
 }
-const result = arr[sorteio(0,2)]
-console.log(arr[sorteio(0,2)]);
-pontuacao();
+
+//console.log(arr[sorteio(0,2)]);
+pontuacao(sorteado);
+// console.log(arr2[sorteado]); ---- testar 
 
 
-//setTimeout((sorteado) => console.log(`Participante sorteado: ${arr[sorteio(0,2)]}`), 500, sorteado);
+
+setTimeout((sorteado) => console.log(`Participante sorteado: ${arr[sorteio(0,2)]}`), 2000, sorteado);
 
 
