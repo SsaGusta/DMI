@@ -239,15 +239,34 @@ exibirResumo(nomeAparelho, consumo, classificacao);
 console.log( '\n');
 
 const arr = ['Gusta', 'Vic', 'Moisa'];
+const arr2 = [92, 67, 44];
+let sorteado = 0;
+
 console.log('Sorteando...');
-const sorteado = 0;
+
 
 
 const sorteio = (min, max) => {
     sorteado = Math.floor(Math.random() * (max - min + 1 ) + min);
-    console.log(sorteado);
     return sorteado;
 
 }
-//setTimeout((sorteado) => console.log(`Participante sorteado: ${sorteado}`, 3000, sorteado));
-// console.log(sorteado)
+
+const pontuacao = (result) => {
+    if (arr2[result] > 80){
+        console.log('Parabéns, você foi premiado!');
+    } else if (arr2[result] <= 80 && arr2[result] >= 50){
+        console.log('Você quase conseguiu! Fique de olho nos próximos sorteios.');
+    } else {
+        console.log('Infelizmente, não foi dessa vez.');
+        console.log(result);
+    } 
+}
+const result = arr[sorteio(0,2)]
+console.log(arr[sorteio(0,2)]);
+pontuacao();
+
+
+//setTimeout((sorteado) => console.log(`Participante sorteado: ${arr[sorteio(0,2)]}`), 500, sorteado);
+
+
