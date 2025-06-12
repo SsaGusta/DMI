@@ -241,8 +241,15 @@ console.log( '\n');
 const arr = ['Gusta', 'Vic', 'Moisa'];
 const arr2 = [92, 67, 44];
 let sorteado = 0;
+
 console.log('Sorteando...');
 
+// setTimeout(() => {
+//     sorteado = sorteio(0, 2);
+//     console.log(`Participante sorteado: ${arr[sorteado]}`);
+//     pontuacao(sorteado);
+//     console.log(`Pontuação: ${arr2[sorteado]}`);
+// }, 2000);
 
 
 const sorteio = (min, max) => {
@@ -261,12 +268,73 @@ const pontuacao = (sorteado) => {
     } 
 }
 
-//console.log(arr[sorteio(0,2)]);
-pontuacao(sorteado);
-// console.log(arr2[sorteado]); ---- testar 
+//Resposta Alura
+
+// const sortearParticipante = (lista) => {
+//     const indice = Math.floor(Math.random() * lista.length);
+//     return lista[indice];
+// };
+ 
+// const avaliarPontuacao = (pontuacao) => {
+//     if (pontuacao > 80) {
+//         return "Parabéns, você foi premiado!";
+//     } else if (pontuacao >= 50) {
+//         return "Você quase conseguiu! Fique de olho nos próximos sorteios.";
+//     } else {
+//         return "Infelizmente, não foi dessa vez.";
+//     }
+// };
+ 
+// const exibirResultado = (participante) => {
+//     console.log("Sorteando...");
+//     setTimeout(() => {
+//         console.log(`Participante sorteado: ${participante.nome}`);
+//         console.log(`Pontuação: ${participante.pontuacao}`);
+//         console.log(avaliarPontuacao(participante.pontuacao));
+//     }, 2000);
+// };
+ 
+// function realizarSorteio(lista) {
+//     const sorteado = sortearParticipante(lista);
+//     exibirResultado(sorteado);
+// }
+ 
+// const participantes = [
+//     { nome: "Laura", pontuacao: 92 },
+//     { nome: "Pedro", pontuacao: 67 },
+//     { nome: "Clara", pontuacao: 44 }
+// ];
+ 
+// realizarSorteio(participantes);
 
 
+//Sua missão é criar uma função chamada contagemRegressiva que:
+// Receba um número inteiro positivo (ex: 5)
+// Imprima esse número e, a cada chamada, reduza em 1
+// Quando chegar em 0, exiba a mensagem: "Lançamento!"
 
-setTimeout((sorteado) => console.log(`Participante sorteado: ${arr[sorteio(0,2)]}`), 2000, sorteado);
+console.log('\n');
 
+
+function contarAte(num) {
+  if (num === 0) return
+  console.log(num);
+  contarAte(num - 1); // chamada recursiva
+    if (num === 1) console.log('Lançamento!');
+
+}
+
+contarAte(5);
+
+//Resposta Alura
+// function contagemRegressiva(numero) {
+//   if (numero > 0) {
+//     console.log(numero);
+//     contagemRegressiva(numero - 1);
+//   } else {
+//     console.log("Lançamento!");
+//   }
+// }
+ 
+// contagemRegressiva(5);
 
