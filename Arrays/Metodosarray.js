@@ -50,3 +50,6 @@ arr1 [0][0] = 5;
 
 console.log(arr1);
 console.log(arr2);
+
+//filtrar um array e alterar valores especificos
+
