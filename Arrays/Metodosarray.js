@@ -52,4 +52,15 @@ console.log(arr1);
 console.log(arr2);
 
 //filtrar um array e alterar valores especificos
+const cpfs = ['12345678999','23456789111',34567891233,'45678912344',56789123455];
+const result = cpfs.map(cpf => typeof cpf === 'string' ? cpf :cpf.toString())
 
+//     if (typeof cpf === 'string') {
+//         return cpf;
+//     } else {
+//         return cpf.toString()
+//     }
+
+// 
+
+console.log(result);
