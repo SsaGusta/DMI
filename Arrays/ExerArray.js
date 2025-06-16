@@ -51,4 +51,78 @@ console.log('Total de despesas: R$',somar);
 console.log('\n');
 console.log('--------------------------------------------------------------------------------------------------');
 console.log('\n');
+//Você está criando um painel para um sistema de chamada escolar. 
+// Você recebeu uma lista com os nomes das pessoas estudantes de uma 
+//turma e precisa exibir um por um para fazer a chamada em sala. Escreva um programa que:
+// Crie um array com os nomes das pessoas.
+// Use o for...of para exibir cada nome individualmente.
 
+const estudantes = ['Carla', 'João', 'Marina', 'Lucas', 'Beatriz'];
+
+let contar = '';
+    for(let i = 0; i < estudantes.length; i++){
+    contar = console.log('Estudante:',estudantes[i]);
+    }
+
+//Resposta Alura
+// const estudantes = ['Carla', 'João', 'Marina', 'Lucas', 'Beatriz'];
+
+// for (const nome of estudantes) {
+//   console.log("Estudante:", nome);
+// }
+console.log('\n');
+console.log('--------------------------------------------------------------------------------------------------');
+console.log('\n');
+// Você recebeu a missão de desenvolver um sistema de envio de notificações.
+// A cada nova mensagem cadastrada, o sistema deve exibir uma notificação no 
+// console informando que a mensagem foi enviada. Escreva um programa que:
+
+// Crie um array com uma lista de mensagens.
+// Use o método forEach() para exibir uma mensagem no console para cada item da lista.
+
+const mensagens = ['Pedido confirmado', 'Pagamento aprovado', 'Produto enviado'];
+
+mensagens.forEach(function(mensagens){
+    console.log(`Notificação: ${mensagens}`);
+    });
+console.log('\n');
+mensagens.forEach(mensagens => console.log(`Notificação: ${mensagens}`)); //forma alternativa
+
+//Resposta Alura
+// const mensagens = ['Pedido confirmado', 'Pagamento aprovado', 'Produto enviado'];
+
+// mensagens.forEach(msg => {
+//   console.log("Notificação:", msg);
+// });
+console.log('\n');
+console.log('--------------------------------------------------------------------------------------------------');
+console.log('\n');
+
+// Você está desenvolvendo um sistema de tarefas do dia a dia. 
+// O sistema deve permitir que a pessoa usuária adicione uma nova 
+// tarefa ao final da lista e, em seguida, remova a última tarefa que foi adicionada. 
+// Escreva um programa que:
+
+// Crie um array com três tarefas iniciais.
+// Adicione uma nova tarefa no final da lista.
+// Remova a última tarefa da lista.
+// Exiba a lista após cada operação
+
+const tarefas = ['Estudar', 'Lavar roupa', 'Fazer compras'];
+tarefas.push('Pagar boletos');
+console.log('Nova tarefa\n',tarefas);
+
+const novastarefas = tarefas.filter(tarefa => tarefa !== 'Fazer compras');
+console.log('Remover tarefa\n',novastarefas);
+
+//Resposta Alura
+// const tarefas = ['Estudar', 'Lavar roupa', 'Fazer compras'];
+
+// tarefas.push('Pagar boletos');
+// console.log("Lista após adicionar:", tarefas);
+
+// tarefas.pop();
+// console.log("Lista após remover a última tarefa:", tarefas);
+console.log('\n');
+console.log('--------------------------------------------------------------------------------------------------');
+console.log('\n');
