@@ -23,3 +23,16 @@ function exibetrofeus(listaTrofeu) {
     }
 }
 exibetrofeus(pessoa.trofeus);
+console.log('\n');
+
+//calcular idade
+
+pessoa.calculaidade = function calculaidade(){
+    const anoNasc = parseInt(this.nascimento.slice(0, 4)); //parsInt converte para inteiro
+    const idade = new Date().getFullYear() - anoNasc;
+    console.log(`A idade é ${idade}`); // maneira forçada de fazer, sem usar parseInt, = 
+    // log(idade - anoNasc) pois é um numero e uma string, respectivamente 
+    
+}
+
+pessoa.calculaidade()
