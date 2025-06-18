@@ -218,3 +218,48 @@ const partiFiltrado = participantes.filter(p =>{
 });
 const aprovados = partiFiltrado.map(p => p.nome);
 console.log('Lista de Aprovados:',partiFiltrado);
+
+console.log('\n');
+console.log('--------------------------------------------------------------------------------------------------');
+console.log('\n');
+
+const produtos = [
+  { nome: 'Notebook', preco: 2500, quantidadeVendida: 75 },
+  { nome: 'Mouse', preco: 100, quantidadeVendida: 180 },
+  { nome: 'Teclado', preco: 150, quantidadeVendida: 125 },
+  { nome: 'Monitor', preco: 900, quantidadeVendida: 95 }
+];
+let relatorio = '';
+let produtosmaisVendidos = '';
+let totalPproduto = '';
+
+const maisLucrativo = {nome: '', totalVendas: 0};
+
+produtos.forEach(prod => {
+    const totalVendidoProduto = prod.preco * prod.quantidadeVendida;
+    relatorio += `Produto: ${prod.nome} | Preço: ${prod.preco} | Quantidade vendida: ${prod.quantidadeVendida}\n`;
+
+    if(prod.quantidadeVendida > 100){
+        produtosmaisVendidos += `${prod.nome}\n`
+    }
+
+    totalPproduto += `${prod.nome}: R$ ${totalVendidoProduto}\n`;
+
+    if(totalVendidoProduto > maisLucrativo.totalVendas){
+        maisLucrativo.nome = prod.nome;
+        maisLucrativo.totalVendas = totalVendidoProduto;
+    }
+
+})
+
+console.log('Relatório de produtos vendidos:'); 
+console.log(relatorio); 
+ 
+console.log('Produtos com alto volume de vendas (> 100 unidades):'); 
+console.log(produtosmaisVendidos); 
+ 
+console.log('Total de vendas por produto:'); 
+console.log(totalPproduto); 
+ 
+console.log('Produto mais lucrativo:'); 
+console.log(`${maisLucrativo.nome} com R$ ${maisLucrativo.totalVendas} em vendas.`);
