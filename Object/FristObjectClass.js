@@ -42,3 +42,7 @@ console.log(Object.values(pessoa));
 console.log(Object.entries(pessoa));
 //retorna tanto chave como valores = [nome, gusta],[score, 1234]...
 
+for (const info in pessoa){
+    const texto = `Chave ${info}, valor do tipo ${typeof pessoa[info]}`;
+    console.log(texto);
+}
