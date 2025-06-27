@@ -35,4 +35,6 @@ pessoa.calculaidade = function calculaidade(){
     
 }
 
-pessoa.calculaidade()
+console.log(Object.keys(pessoa)); //retorna todas as chaves q tem no array = nome, cpf, email ....
+console.log(Object.values(pessoa)); //retorna os valores das chaves q tem no array = gusta, 1213, g@.com...
+
