@@ -82,3 +82,17 @@ console.log(carro);
 console.log(
   "--------------------------------------------------------------------------------------------------"
 );
+// Escreva um programa que:
+
+// Crie um array chamado dispositivos, contendo 3 objetos com as propriedades: nome e status.
+// Use um loop para exibir no console o nome e status de cada dispositivo.
+
+const dispositivos = [
+  { nome: "Impressora", status: true },
+  { nome: "Scanner", status: false },
+  { nome: "Projetor", status: true },
+];
+for (const dispositivo of dispositivos) {
+  const status = dispositivo.status ? "Ativo" : "Inativo";
+  console.log(`Dispositivo: ${dispositivo.nome} | Status: ${status}`);
+}
