@@ -96,3 +96,24 @@ for (const dispositivo of dispositivos) {
   const status = dispositivo.status ? "Ativo" : "Inativo";
   console.log(`Dispositivo: ${dispositivo.nome} | Status: ${status}`);
 }
+
+console.log(
+  "--------------------------------------------------------------------------------------------------"
+);
+
+// Crie um objeto maquina com as propriedades: nome, funcionando.
+// Adicione um método chamado exibirStatus que exibe no console:
+// "A máquina [nome] está em funcionamento." ou "A máquina [nome] está parada.",
+// dependendo do valor de funcionando.
+// Chame o método exibirStatus.
+
+const maquina = {
+  nome: "Esteira transportadora",
+  funcionando: true,
+  exibirStatus: true,
+};
+if (maquina.exibirStatus == true) {
+  console.log(`A máquina ${maquina.nome} está em funcionamento`);
+} else {
+  console.log(`A máquina ${maquina.nome} está parada`);
+}
