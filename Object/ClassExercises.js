@@ -47,3 +47,16 @@ console.log("Idioma:", configuracoes["idioma"]);
 console.log(
   "--------------------------------------------------------------------------------------------------"
 );
+
+// Crie um objeto receita com as propriedades:
+// nome, ingredientes (array com pelo menos 5 itens) e tempoPreparo.
+// Acesse o índice 2 da lista que está dentro do objeto.
+// Exiba no console a frase: "Ingrediente complementar: [ingrediente]".
+
+const receita = {
+  nome: "Pão",
+  ingredientes: ["Ovos", "Leite", "Farinha de trigo", "Sal", "Queijo"],
+  tempoPreparo: "1 horas",
+};
+
+console.log(`Ingrediente Complementar: ${receita.ingredientes[2]}`);
