@@ -60,3 +60,25 @@ const receita = {
 };
 
 console.log(`Ingrediente Complementar: ${receita.ingredientes[2]}`);
+
+console.log(
+  "--------------------------------------------------------------------------------------------------"
+);
+
+// Escreva um programa que:
+
+// Crie um objeto carro com as propriedades: marca, modelo, ano, modeloAntigo;
+// Remova a propriedade modeloAntigo;
+// Exiba o objeto final no console.
+
+const carro = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  ano: 2022,
+  modeloAntigo: "Corolla XEi",
+};
+delete carro.modeloAntigo;
+console.log(carro);
+console.log(
+  "--------------------------------------------------------------------------------------------------"
+);
