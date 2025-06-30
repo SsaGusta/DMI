@@ -46,3 +46,11 @@ for (const info in pessoa){
     const texto = `Chave ${info}, valor do tipo ${typeof pessoa[info]}`;
     console.log(texto);
 }
+
+//acessar um array de objetos e imprimir no terminal os nomes e status de cada
+
+const clientes = [
+    {nome: 'Mariana M',ativo: true,},
+    {nome: 'Rafael R',ativo: false,},
+    {nome: 'Fabio F',ativo: false,},
+]
