@@ -163,3 +163,90 @@ console.log(
 // status, seguindo a seguinte lógica:
 // Se o valor for maior que 50, mostre a mensagem (alerta)
 // Caso contrário, mostre (ok)
+const relatorio = {
+  temperatura: 75,
+  vibracao: 40,
+  pressao: 55,
+  nivelRuido: 30
+};
+
+const categorias = Object.keys(relatorio);
+const valores = Object.values(relatorio);
+const entradas = Object.entries(relatorio);
+
+console.log("Categorias avaliadas:", categorias);
+console.log("Valores registrados:", valores);
+
+console.log("\nDetalhamento:");
+for (let [chave, valor] of entradas) {
+  const status = valor > 50 ? "alerta" : "ok";
+  console.log(`${chave}: ${valor} (${status})`);
+}
+console.log(
+  "--------------------------------------------------------------------------------------------------"
+);
+// Agora, o sistema precisa gerar um relatório que exiba:
+
+// O total de dias parados no ano.
+// A quantidade de meses com manutenção (ou seja, com valor maior que zero).
+// Um alerta caso o total de dias parados seja maior que 20 dias: Status: Atenção! Acima do limite anual. 
+// ou Status: Dentro do limite anual.
+
+const manutencao = {
+  jan: 2,
+  fev: 0,
+  mar: 5,
+  abr: 4,
+  mai: 0,
+  jun: 7
+};
+
+let soma = 0;
+let cont = 0; 
+const val = Object.values(manutencao);
+for(let i = 0; i < val.length; i++){
+  soma += val[i];
+    if(val[i] > 0){
+      cont++
+    }
+}
+let stt = soma < 20 ? 'Dentro do limite anual' : 'Atenção! Acima do limite anual.';
+
+console.log(`Total de dias parados: ${soma}`);
+console.log(`Meses com manunetenção registrada: ${cont}`);
+console.log(`Status ${stt}`);
+
+// Resposta Alura
+
+// const manutencao = {
+//   jan: 2,
+//   fev: 0,
+//   mar: 5,
+//   abr: 4,
+//   mai: 0,
+//   jun: 7
+// };
+
+// let totalDias = 0;
+// let mesesComParada = 0;
+
+// for (let mes in manutencao) {
+//   const dias = manutencao[mes];
+//   totalDias += dias;
+
+//   if (dias > 0) {
+//     mesesComParada++;
+//   }
+// }
+
+// console.log(`Total de dias parados: ${totalDias}`);
+// console.log(`Meses com manutenção registrada: ${mesesComParada}`);
+
+// if (totalDias > 20) {
+//   console.log("Status: Atenção! Acima do limite anual.");
+// } else {
+//   console.log("Status: Dentro do limite anual");
+// }
+console.log(
+  "--------------------------------------------------------------------------------------------------"
+);

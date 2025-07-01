@@ -51,10 +51,6 @@ const clientes = [
   { nome: "Rafael R", ativo: false },
   { nome: "Fabio F", ativo: false },
 ];
-
-console.log(
-  "--------------------------------------------------------------------------------------------------"
-);
 console.log("\n");
 
 for (const cliente of clientes) {
