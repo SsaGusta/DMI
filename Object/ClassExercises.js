@@ -117,3 +117,49 @@ if (maquina.exibirStatus == true) {
 } else {
   console.log(`A máquina ${maquina.nome} está parada`);
 }
+
+console.log(
+  "--------------------------------------------------------------------------------------------------"
+);
+// Criar uma função chamada montarObjeto que receba como 
+// parâmetro um array de pares chave-valor, como este:
+
+const montarObjeto = [
+  ['nome', 'João'],
+  ['idade', 30],
+  ['cidade', 'Curitiba']
+]
+const xmontarObjeto = [
+  console.log(`${montarObjeto[0][0]}: ${montarObjeto[0][1]}`),
+  console.log(`${montarObjeto[1][0]}: ${montarObjeto[1][1]}`),
+  console.log(`${montarObjeto[2][0]}: ${montarObjeto[2][1]}`)
+]
+xmontarObjeto;
+
+//Resposta Alura
+// function montarObjeto(arrPares) {
+//     const resultado = {};
+ 
+//     for (const [chave, valor] of arrPares) {
+//         resultado[chave] = valor;
+//     }
+ 
+//     return resultado;
+// }
+ 
+// const dados = [
+//     ['nome', 'João'],
+//     ['idade', 30],
+//     ['cidade', 'Curitiba']
+// ];
+ 
+// console.log(montarObjeto(dados));
+console.log(
+  "--------------------------------------------------------------------------------------------------"
+);
+// Exibir todas as categorias avaliadas;
+// Exibir todos os valores registrados;
+// Percorra todas as medições (pares categoria/valor) e imprima um detalhamento com 
+// status, seguindo a seguinte lógica:
+// Se o valor for maior que 50, mostre a mensagem (alerta)
+// Caso contrário, mostre (ok)
